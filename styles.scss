@@ -1,0 +1,299 @@
+$anime-time: 8s;
+
+$box-size: 200px;
+$clip-distance: .05;
+$clip-size: $box-size * (1 + $clip-distance * 2);
+$path-width: 2px;
+
+$main-color: #69ca62;
+
+:root {
+    --bg-color: #161b22;
+    --text-color: #ffffff;
+    --card-bg: #2c3440;
+    --border-color: #60a5fa;
+}
+
+/* .dark-mode {
+    --bg-color: #1f2937;
+    --text-color: #ffffff;
+    --card-bg: #374151;
+    --border-color: #60a5fa;
+} */
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 20px 0;
+    text-align: right;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 0;
+    margin-top: 50px;
+    height: 100vh;
+}
+
+.hero img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about {
+    position: relative;
+    padding: 60px 0;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.about::before,
+.about::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    box-shadow: inset 0 0 0 2px var(--border-color);
+    animation: clipMe 15s linear infinite;
+}
+
+.about::after {
+    animation-delay: -4s;
+}
+
+@keyframes clipMe {
+    0%, 100% { clip: rect(0px, 802px, 2px, 0px); }
+    25% { clip: rect(0px, 2px, 402px, 0px); }
+    50% { clip: rect(400px, 802px, 402px, 0px); }
+    75% { clip: rect(0px, 802px, 402px, 800px); }
+}
+
+.about, .skills, .projects {
+    padding: 60px 0;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills {
+    overflow: hidden;
+    position: relative;
+}
+
+.skills-grid {
+    display: flex;
+    gap: 20px;
+    animation: slideLeftRight 30s linear infinite;
+    width: max-content;
+}
+
+@keyframes slideLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50%));
+    }
+}
+
+.skills-grid::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(100%);
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        animation: slideLeftRight 60s linear infinite;
+    }
+
+    .skill-item {
+        flex: 0 0 250px;
+    }
+}
+
+
+.skill-item {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    flex: 0 0 250px;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: var(--border-color);
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    overflow: visible;
+}
+
+.project-card::before,
+.project-card::after,
+.project-card > span::before,
+.project-card > span::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    transition: 1s;
+}
+
+.project-card::before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
+}
+
+.project-card::after {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+}
+
+.project-card > span::before {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
+}
+
+.project-card > span::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+}
+
+.project-card:hover::before,
+.project-card:hover::after,
+.project-card:hover > span::before,
+.project-card:hover > span::after {
+    width: calc(50% - 2px);
+    height: calc(50% - 2px);
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card a {
+    color: var(--border-color);
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--card-bg);
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: none;
+    }
+
+    .skill-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}

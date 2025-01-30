@@ -1,9 +1,9 @@
 :root {
   --bg-color: #161b22;
   --text-color: #ffffff;
-  --card-bg: #2c3440;
+  --card-bg: #09131d;
   --border-color: #4b82c5;
-  --about-color: #0e3555;
+  --about-color: #000000;
   --scrollbar-track: #3498db;
   --scrollbar-thumb: #1a2639;
 }
@@ -74,6 +74,7 @@ header {
 }
 
 .hero {
+  position: relative;
   text-align: center;
   padding: 60px 0;
   margin-top: 50px;
@@ -112,11 +113,10 @@ header {
   margin: 0 auto;
 }
 
-.rhombus {
-  margin-top: 5em;
-  width: 20px;
-  height: 20px;
-  animation: rotate 2s infinite;
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  animation: rotate 16s infinite;
 }
 
 @keyframes rotate {
@@ -164,11 +164,34 @@ header {
 h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  font-family: "Rubik Vinyl", serif;
+}
+
+#simpleUsage {
+  font-family: "Julee", serif;
 }
 
 p {
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+#lineh1{
+  position: absolute;
+  top: 1rem;
+  width: 2px;
+  background: #067fdc;
+  animation: lineV 5s 6s infinite linear;
+}
+
+@keyframes lineV{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 95%;
+    opacity: 0;
+  }
 }
 
 h2 {
@@ -181,11 +204,21 @@ h2 {
   height: 50vh;
   position: relative;
   padding: 60px 0;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: 22% 78% 39% 61% / 72% 21% 79% 28%; 
+}
+
+.about h2 {
+  font-family: "Gloria Hallelujah", serif;
+  font-weight: 400;
+}
+
+.about p {
+  font-family: "Julee", serif;
+  font-size: 20px;
 }
 
 .about::before {
@@ -233,10 +266,28 @@ h2 {
   position: relative;
 }
 
+.skills h2 {
+  font-family: "Gloria Hallelujah", serif;
+}
+
+.skills h3 {
+  font-family: "Just Another Hand", serif;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+
+.skills-header {
+  width: 16%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem auto;
+}
+
 .skills-grid {
   display: flex;
   gap: 20px;
-  animation: slideLeftRight 30s linear infinite;
+  animation: slideLeftRight 8s linear infinite;
   width: max-content;
 }
 
@@ -294,6 +345,9 @@ h2 {
   transition: width 1s ease-in-out;
 }
 
+.projects {
+  font-family: "Julee", serif;
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

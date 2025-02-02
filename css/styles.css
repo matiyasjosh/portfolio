@@ -73,12 +73,25 @@ header {
   font-size: 24px;
 }
 
+/* fadeindown animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero {
   position: relative;
   text-align: center;
   padding: 60px 0;
   margin-top: 50px;
   height: 100vh;
+  animation: fadeInDown 5s ease forwards;
 }
 
 .photo {
@@ -86,7 +99,8 @@ header {
   height: 200px;
   border-radius: 50%;
   margin-bottom: 20px;
-  animation: float 3s ease-in-out infinite;
+  /* Remove the float animation */
+  position: relative;
 }
 
 @keyframes float {
@@ -200,6 +214,17 @@ h2 {
   text-align: center;
 }
 
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-130px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .about {
   height: 50vh;
   position: relative;
@@ -207,8 +232,16 @@ h2 {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
+  border: 2px solid #31498b;
   overflow: hidden;
   border-radius: 22% 78% 39% 61% / 72% 21% 79% 28%; 
+  opacity: 0; /* Start hidden */
+  transform: translateX(-130px); /* Start off-screen */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about.animate {
+  animation: fadeInRight 3s ease forwards;
 }
 
 .about h2 {
@@ -264,6 +297,13 @@ h2 {
 .skills {
   overflow: hidden;
   position: relative;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly below its final position */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skills.animate {
+  animation: fadeInDown 3s ease forwards;
 }
 
 .skills h2 {
@@ -284,14 +324,19 @@ h2 {
   margin: 1rem auto;
 }
 
-.skills-grid {
-  display: flex;
-  gap: 20px;
-  animation: slideLeftRight 8s linear infinite;
-  width: max-content;
+.skills-grid-container {
+  overflow: hidden;
+  width: 100%;
 }
 
-@keyframes slideLeftRight {
+.skills-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
   0% {
     transform: translateX(0);
   }
@@ -299,6 +344,7 @@ h2 {
     transform: translateX(-50%);
   }
 }
+
 .skills-grid::after {
   content: "";
   display: block;
@@ -320,6 +366,9 @@ h2 {
   }
 }
 .skill-item {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust based on your design */
+  margin-right: 20px;
   background-color: var(--card-bg);
   padding: 20px;
   border-radius: 8px;
@@ -327,27 +376,53 @@ h2 {
   flex: 0 0 250px;
 }
 
+.skill-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .skill-item:hover {
   transform: scale(1.05);
 }
 
 .skill-bar {
-  height: 10px;
-  background-color: #e5e7eb;
+  background: #e0e0e0;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
+  height: 10px;
 }
 
 .skill-progress {
+  background: linear-gradient(90deg, #6a82fb, #fc5c7d);
   height: 100%;
-  background-color: var(--border-color);
-  width: 0;
-  transition: width 1s ease-in-out;
+  width: 0%; /* Initial width set to 0 */
+  border-radius: 5px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .projects {
   font-family: "Julee", serif;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Start slightly below its final position */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
+.projects.animate {
+  animation: fadeInUp 3s ease forwards;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

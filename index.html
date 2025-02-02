@@ -1,208 +1,295 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/fire.png" type="png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/fire.png" type="png" />
     <title>Matiyas Woldemariam - Portfolio</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="./script.js" defer></script>
 
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Julee&family=Just+Another+Hand&family=Rubik+Vinyl&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Julee&family=Just+Another+Hand&family=Rubik+Vinyl&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- <header>
         <div class="container">
             <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
         </div>
         <div id="lineh1"></div>
     </header> -->
-    
+    <!-- <img
+      src="./images/designer.png"
+      alt="Matiyas Woldemariam"
+      class="photo animate-on-scroll"
+    /> -->
+
     <main class="container">
-        <section class="hero">
-            <div class="icons">
-                <img src="./images/Frontend Development.png" alt="icon" class="frontend">
-                <img src="./images/user-experience.png" alt="icon" class="frontend">
-            </div>
+      <section class="hero">
+        <div class="icons">
+          <img
+            src="./images/Frontend Development.png"
+            alt="icon"
+            class="frontend"
+          />
+          <img src="./images/user-experience.png" alt="icon" class="frontend" />
+        </div>
 
-            <div class="icons">
-                <img src="./images/front-development.png" alt="icons" class="frontend">
-                <img src="./images/mati.jpg" alt="Matiyas Woldemariam" class="photo">
-                <img src="./images/designer.png" alt="icons" class="frontend">
-            </div>
-            <h1>Matiyas Woldemariam</h1>
-            <p id="simpleUsage"></p>
-            
-            <div class="icons" id="i1">
-                <!-- <img src="./images/rhombus.png" alt="icon" class="rhombus" width="50px" height="50px">
-                <img src="./images/rhombus.png" alt="icon" class="rhombus" width="50px" height="50px">
-                <img src="./images/rhombus.png" alt="icon" class="rhombus" width="50px" height="50px"> -->
-            </div>
-        </section>
+        <div class="icons">
+          <img
+            src="./images/front-development.png"
+            alt="icons"
+            class="frontend"
+          />
+          <img
+            src="./images/mati.jpg"
+            alt="Matiyas Woldemariam"
+            class="photo"
+          />
+          <img src="./images/designer.png" alt="icons" class="frontend" />
+        </div>
+        <h1>Matiyas Woldemariam</h1>
+        <p id="simpleUsage"></p>
+      </section>
 
-        <section class="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm Matiyas, a passionate frontend developer with expertise in HTML, CSS, JavaScript, ReactJS, and NextJS. With a keen eye for design and a love for creating seamless user experiences, I strive to build beautiful and functional web applications.</p>
-        </section>
-        
-        <section class="skills">
-            <div class="skills-header">
-                <h2>My Skills</h2>
-                <img src="./images/evolve.png" alt="icon" class="skill-icon" width="50px" height="50px">
-            </div>
+      <section class="about animate-on-scroll">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Matiyas, a passionate frontend developer with expertise in
+          HTML, CSS, JavaScript, ReactJS, and NextJS. With a keen eye for design
+          and a love for creating seamless user experiences, I strive to build
+          beautiful and functional web applications.
+        </p>
+      </section>
 
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h3>HTML5</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>CSS3</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>ReactJS</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>NextJS</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>UI/UX Design</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div>
-                </div>
-                <!-- Duplicate skills for continuous animation -->
-                <div class="skill-item">
-                    <h3>HTML5</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>CSS3</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>ReactJS</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>NextJS</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h3>UI/UX Design</h3>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div>
-                </div>
+      <section class="skills animate-on-scroll" id="skills-section">
+        <div class="skills-header">
+          <h2>My Skills</h2>
+          <img
+            src="./images/evolve.png"
+            alt="icon"
+            class="skill-icon"
+            width="50px"
+            height="50px"
+          />
+        </div>
+        <div class="skill-grid-container">
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>HTML5</h3>
+                <img
+                  src="images/html-5.png"
+                  alt="."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
             </div>
-        </section>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>CSS3</h3>
+                <img
+                  src="images/css-3.png"
+                  alt=".."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>JavaScript</h3>
+                <img
+                  src="images/java-script.png"
+                  alt="..."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>ReactJS</h3>
+                <img
+                  src="images/physics.png"
+                  alt="...."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>NextJS</h3>
+                <img
+                  src="images/evolve.png"
+                  alt="....."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>UI/UX Design</h3>
+                <img
+                  src="images/user-experience.png"
+                  alt="......"
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+            <!-- Duplicate skills for continuous animation -->
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>HTML5</h3>
+                <img
+                  src="images/html-5.png"
+                  alt="."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>CSS3</h3>
+                <img
+                  src="images/css-3.png"
+                  alt=".."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>JavaScript</h3>
+                <img
+                  src="images/java-script.png"
+                  alt="..."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>ReactJS</h3>
+                <img
+                  src="images/physics.png"
+                  alt="...."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>NextJS</h3>
+                <img
+                  src="images/evolve.png"
+                  alt="....."
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <h3>UI/UX Design</h3>
+                <img
+                  src="images/user-experience.png"
+                  alt="......"
+                  width="50px"
+                  height="50px"
+                />
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section class="projects">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <span></span>
-                    <h3>Banking Website</h3>
-                    <p>A fully responsive banking website built with React and NextJS.</p>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="project-card">
-                    <span></span>
-                    <h3>Job Lising Website</h3>
-                    <p>A job listing application that provides currently vacant jobs.</p>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="project-card">
-                    <span></span>
-                    <h3>Task Management System</h3>
-                    <p>A full-stack task management application built with React and Node.js.</p>
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </section>
+      <section class="projects animate-on-scroll">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <span></span>
+            <h3>Banking Website</h3>
+            <p>
+              A fully responsive banking website built with React and NextJS.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project-card">
+            <span></span>
+            <h3>Job Lising Website</h3>
+            <p>
+              A job listing application that provides currently vacant jobs.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project-card">
+            <span></span>
+            <h3>Task Management System</h3>
+            <p>
+              A full-stack task management application built with React and
+              Node.js.
+            </p>
+            <a href="#">View Project</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Matiyas Woldemariam. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2023 Matiyas Woldemariam. All rights reserved.</p>
+      </div>
     </footer>
-
-    <script>
-        // Dark mode toggle
-        // const themeToggle = document.querySelector('.theme-toggle');
-        // const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-
-        // function setTheme(theme) {
-        //     document.body.classList.toggle('dark-mode', theme === 'dark');
-        //     themeToggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
-        //     localStorage.setItem('theme', theme);
-        // }
-
-        // // Check for saved theme preference or use user's system preference
-        // const savedTheme = localStorage.getItem('theme');
-        // setTheme(savedTheme || (prefersDarkScheme.matches ? 'dark' : 'light'));
-
-        // themeToggle.addEventListener('click', () => {
-        //     const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
-        //     setTheme(newTheme);
-        // });
-
-        // Animate skill bars
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-        }
-
-        // Run animation when the skills section is in view
-        const skillsSection = document.querySelector('.skills');
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                animateSkillBars();
-                observer.unobserve(skillsSection);
-            }
-        });
-
-        observer.observe(skillsSection);
-
-        new TypeIt("#simpleUsage", {
-            speed: 100,
-            deleteSpeed: 90,
-            waitUntilVisible: true,
-            loop: true,
-        })
-        .type("Frontend Developer & UI/UX Enthusiast.")
-        .pause(2500) // Pause before deleting
-        .delete() // Delete the string
-        .type("I am up to work on frontend projects!")
-        .pause(2500) // Pause before deleting
-        .delete() // Delete the string
-        .go();
-
-        // for the scrollbar
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                document.body.classList.add('scrolled');
-            } else {
-                document.body.classList.remove('scrolled');
-            }
-        });
-    </script>
-</body>
+  </body>
 </html>
